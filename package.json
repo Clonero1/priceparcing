@@ -1,0 +1,19 @@
+{
+  "name": "priceparcing",
+  "version": "0.11.1",
+  "private": true,
+  "type": "module",
+  "description": "Монитор цен по артикулам на impart.online и autopiter.ru",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "auth": "node src/authorize.js",
+    "monitor": "node src/cli.js",
+    "test": "node --test",
+    "check": "node --check src/cli.js && node --check src/site-monitor.js && node --check src/background.js && node --check src/authorize.js && node --check src/report.js && node --check src/regulatory-price.js && node --check src/collection-health.js && node --check src/progress.js && node --check src/batches.js && node --check src/mail.js && node --check src/configure-email.js && node --check src/fifo.js"
+  },
+  "dependencies": {
+    "playwright": "1.62.1"
+  }
+}
